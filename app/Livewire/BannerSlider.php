@@ -18,7 +18,12 @@ class BannerSlider extends Component
 
     public function render()
     {
-        return view('livewire.banner-slider');
+        $this->banners = Banner::where('is_active', true)->get();
+        return view('livewire.banner-slider',
+            [
+                'banners' => $this->banners
+            ]
+        );
     }
 }
 

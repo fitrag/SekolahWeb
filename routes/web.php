@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\AnnouncementComponent;
-use App\Livewire\{LoginComponent, RegisterComponent, DashboardComponent, Settings};
+use App\Livewire\{LoginComponent, RegisterComponent, DashboardComponent, Settings, BannerSlider, BannersIndexComponent, BannersCreateComponent};    
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +18,5 @@ Route::get('/login', LoginComponent::class)->name('login');
 Route::get('/register', RegisterComponent::class)->name('register');
 Route::get('/dashboard', DashboardComponent::class)->name('dashboard');
 Route::get('/settings', Settings::class)->name('settings');
+Route::get('/banners', BannersIndexComponent::class)->name('banners');
+Route::get('/banners/create', BannersCreateComponent::class)->name('banners.create');
