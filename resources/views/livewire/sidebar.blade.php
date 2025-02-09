@@ -18,10 +18,10 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('dashboard') }}" 
+                <a href="{{ route('articles') }}" 
                     wire:current.class="bg-gray-600"
                     wire:navigate.hover prefetch
-                    @click="activeMenu = 'dashboard'"
+                    @click="activeMenu = 'articles'"
                     class="flex items-center p-2 text-base font-normal  rounded-lg transition duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="size-7"><path fill="currentColor" fill-opacity="0.8" d="M20 3.5H5.5c-.31 0-.61.15-.8.4l-1.5 2c-.49.66-.02 1.6.8 1.6h14.5c.31 0 .61-.15.8-.4l1.5-2c.49-.66.02-1.6-.8-1.6Z"></path><path fill="currentColor" d="M4 10h14.5c.31 0 .61.15.8.4l1.5 2c.49.66.02 1.6-.8 1.6H5.5c-.31 0-.61-.15-.8-.4l-1.5-2c-.49-.66-.02-1.6.8-1.6Z" fill-opacity="0.4"></path><path fill="currentColor" fill-opacity="0.8" d="M20 16.5H5.5c-.31 0-.61.15-.8.4l-1.5 2c-.49.66-.02 1.6.8 1.6h14.5c.31 0 .61-.15.8-.4l1.5-2c.49-.66.02-1.6-.8-1.6Z"></path></svg>
                     <span :class="isOpen ? 'ml-3' : 'hidden'">Artikel</span>
