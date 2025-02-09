@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ $title ?? 'Page Title' }}</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/trix@1.3.1/dist/trix.css">
         @vite('resources/css/app.css')
     
     </head>
@@ -64,7 +63,6 @@
     @guest
     {{ $slot }}
     @endguest
-    <script src="https://cdn.jsdelivr.net/npm/trix@1.3.1/dist/trix.js"></script>
     @vite('resources/js/app.js')
   </body>
 </html>

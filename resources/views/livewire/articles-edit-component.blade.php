@@ -20,14 +20,22 @@
             @enderror
         </div>
 
-        <!-- Konten -->
-        <div wire:ignore>
+        <div wire:ignore.self>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/trix@1.3.1/dist/trix.css">
             <label for="content" class="block text-sm font-medium text-gray-700">Konten</label>
             <input id="{{ $trixId }}" type="hidden" wire:model="content" value="{{ $value }}">
-            <trix-editor input="{{ $trixId }}"></trix-editor>
+            <trix-editor wire:ignore.self input="{{ $trixId }}"></trix-editor>
             @error('content')
                 <span class="text-red-500 text-sm">{{ $message }}</span>
             @enderror
+            <script src="https://cdn.jsdelivr.net/npm/trix@1.3.1/dist/trix.js"></script>
+            <script>
+                var trixEditor = document.getElementById("{{ $trixId }}")
+
+                addEventListener("trix-blur", function(event) {
+                    @this.set('value', trixEditor.getAttribute('value'))
+                })
+            </script>
         </div>
 
         <!-- Gambar -->
@@ -73,10 +81,3 @@
         </div>
     </form>
 </div>
-<script>
-    var trixEditor = document.getElementById("{{ $trixId }}")
-
-    addEventListener("trix-blur", function(event) {
-        @this.set('value', trixEditor.getAttribute('value'))
-    })
-</script>

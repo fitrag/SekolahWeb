@@ -34,8 +34,7 @@ class ArticlesCreateComponent extends Component
     }
 
     public function updatedValue($value){
-        // $this->content = $value;
-        dd($value);
+        $this->content = $value;
     }
 
     public function completeUpload(string $uploadedUrl, string $trixUploadCompletedEvent){
