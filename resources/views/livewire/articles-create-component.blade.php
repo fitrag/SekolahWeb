@@ -116,4 +116,9 @@
             </button>
         </div>
     </form>
+    <style>
+        .trix-button-group.trix-button-group--file-tools {
+        display:none;
+    }
+    </style>
 </div>

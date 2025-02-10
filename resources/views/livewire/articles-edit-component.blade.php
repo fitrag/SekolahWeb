@@ -20,11 +20,11 @@
             @enderror
         </div>
 
-        <div wire:ignore.self>
+        <div wire:ignore>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/trix@1.3.1/dist/trix.css">
             <label for="content" class="block text-sm font-medium text-gray-700">Konten</label>
             <input id="{{ $trixId }}" type="hidden" wire:model="content" value="{{ $value }}">
-            <trix-editor wire:ignore.self input="{{ $trixId }}"></trix-editor>
+            <trix-editor wire:ignore input="{{ $trixId }}"></trix-editor>
             @error('content')
                 <span class="text-red-500 text-sm">{{ $message }}</span>
             @enderror

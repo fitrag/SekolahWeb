@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Banner;
+use Illuminate\Support\Facades\Storage;
 
 class BannersIndexComponent extends Component
 {

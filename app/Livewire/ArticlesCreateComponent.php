@@ -24,7 +24,7 @@ class ArticlesCreateComponent extends Component
     protected $rules = [
         'title' => 'required|string|max:255',
         'content' => 'required|string',
-        'image' => 'nullable|image|max:2048', // Maksimal 2MB
+        'image' => 'nullable|image|max:15048', // Maksimal 2MB
         'is_published' => 'boolean',
     ];
 

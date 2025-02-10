@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Article;
+use Illuminate\Support\Facades\Storage;
 
 class ArticlesIndexComponent extends Component
 {

@@ -2,18 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\AnnouncementComponent;
-use App\Livewire\{LoginComponent, RegisterComponent, DashboardComponent, Settings, BannerSlider, BannersIndexComponent, BannersCreateComponent, ArticlesIndexComponent, ArticlesCreateComponent, ArticlesEditComponent};    
+use App\Livewire\{LoginComponent, RegisterComponent, DashboardComponent, Settings, BannerSlider, BannersIndexComponent, BannersCreateComponent, ArticlesIndexComponent, ArticlesCreateComponent, ArticlesEditComponent};  
+use App\Http\Controllers\IndexController;  
+use App\Http\Controllers\ArticleController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 Route::get('/login', LoginComponent::class)->name('login');
 Route::get('/register', RegisterComponent::class)->name('register');
 Route::get('/dashboard', DashboardComponent::class)->name('dashboard');
@@ -23,3 +15,6 @@ Route::get('/banners/create', BannersCreateComponent::class)->name('banners.crea
 Route::get('/articles', ArticlesIndexComponent::class)->name('articles');
 Route::get('/articles/create', ArticlesCreateComponent::class)->name('articles.create');
 Route::get('/articles/edit/{id}', ArticlesEditComponent::class)->name('articles.edit');
+
+Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/articles/{article}', [ArticleController::class, 'show'])->name('articles.show');

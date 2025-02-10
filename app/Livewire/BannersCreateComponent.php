@@ -19,7 +19,7 @@ class BannersCreateComponent extends Component
     // Aturan validasi untuk form
     protected $rules = [
         'title' => 'nullable|string|max:255',
-        'image' => 'nullable|image|max:2048', // Gambar maksimal 2MB
+        'image' => 'nullable|image|max:10048', // Gambar maksimal 2MB
         'description' => 'nullable|string',
         'is_active' => 'boolean',
     ];
