@@ -57,7 +57,7 @@
 
 @section('content')
 <x-header/>
-<div class="owl-carousel owl-theme owl-loaded relative z-0 mt-[70px] border-b-4 border-orange-500" wire:ignore>
+<div class="owl-carousel owl-theme owl-loaded relative z-0 mt-[65px] border-b-4 border-orange-500" wire:ignore>
     @foreach ($banners as $banner)
     <div class="relative h-100 lg:h-[600px] overflow-hidden shadow-lg">
         <!-- Background Image -->
@@ -67,7 +67,7 @@
         >
             <!-- Gradient Overlay -->
             @if($banner->title || $banner->description)
-                <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black opacity-95"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black opacity-95"></div>
             @endif
         </div>
 
