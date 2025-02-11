@@ -81,6 +81,8 @@
     @endforeach
 </div>
 
+<x-contact/>
+
 <!-- Komponen Artikel -->
 <div class="grid lg:grid-cols-[2fr_1fr]">
     <div class="px-4">
