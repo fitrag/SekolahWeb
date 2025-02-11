@@ -2,7 +2,7 @@
 
 @section('content')
 <x-header />
-<div class="py-6 px-10 bg-white rounded-lg shadow-md mt-[100px]">
+<div class="py-6 px-10 bg-white mt-[100px]">
     <div class="grid lg:grid-cols-[2fr_1fr] gap-10">
         <div class="">
             <div class="mb-6">
