@@ -82,6 +82,8 @@
 </div>
 
 <x-contact/>
+<x-sambutan/>
+<x-jurusan/>
 
 <!-- Komponen Artikel -->
 <div class="grid lg:grid-cols-[2fr_1fr]">
