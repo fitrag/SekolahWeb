@@ -46,8 +46,8 @@
             autoplayTimeout: 5000,
             autoplayHoverPause: true, // Pause on hover
             navText: [
-                "<i class='fas fa-chevron-left text-2xl text-white bg-black/40 p-4 hover:bg-opacity-100 transition absolute top-[35vh] left-5'></i>", // Left arrow icon
-                "<i class='fas fa-chevron-right text-2xl text-white bg-black/40 p-4 hover:bg-opacity-100 transition absolute top-[35vh] right-5'></i>" // Right arrow icon
+                "<i class='fas fa-chevron-left text-2xl text-white bg-black/40 p-4 hover:bg-opacity-100 transition absolute lg:top-[35vh] top-[20vh] left-5'></i>", // Left arrow icon
+                "<i class='fas fa-chevron-right text-2xl text-white bg-black/40 p-4 hover:bg-opacity-100 transition absolute lg:top-[35vh] top-[20vh] right-5'></i>" // Right arrow icon
             ]
         });
     });
