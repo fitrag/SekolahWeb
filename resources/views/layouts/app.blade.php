@@ -17,6 +17,7 @@
 <body>
     @yield('content')
 
+    <x-footer />
     @livewireScripts
     @stack('scripts')
 </body>

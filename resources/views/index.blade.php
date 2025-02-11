@@ -86,7 +86,7 @@
 <x-jurusan/>
 
 <!-- Komponen Artikel -->
-<div class="grid lg:grid-cols-[2fr_1fr]">
+<div class="">
     <div class="px-4">
 
         @livewire('articles-homepage-component')
