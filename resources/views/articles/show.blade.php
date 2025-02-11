@@ -48,6 +48,33 @@
             <div class="mt-4 text-gray-700">
                 {!! $article->content !!}
             </div>
+
+            <!-- Bagian Komentar -->
+            <div class="mt-8">
+                
+
+                <!-- Formulir Tambah Komentar -->
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Tambah Komentar</h3>
+                    <form action="" method="POST">
+                        @csrf
+                        <input type="hidden" name="article_id" value="{{ $article->id }}">
+                        <div class="mb-4">
+                            <label for="body" class="block text-sm font-medium text-gray-700">Komentar</label>
+                            <textarea id="body" name="body" rows="3"
+                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500 placeholder-gray-400"
+                                placeholder="Tulis komentar Anda..."></textarea>
+                            @error('body')
+                                <span class="text-red-500 text-sm">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <button type="submit"
+                            class="inline-flex items-center px-4 py-2 bg-orange-600 text-white text-sm font-medium rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition duration-300 ease-in-out">
+                            Kirim Komentar
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <!-- Kolom Kanan: Artikel Terkait -->
@@ -68,7 +95,6 @@
                                         <span class="text-gray-500">Tidak ada gambar</span>
                                     </div>
                                 @endif
-
                                 <!-- Judul Artikel -->
                                 <div>
                                     <h4 class="text-sm font-medium text-gray-800 line-clamp-2">
